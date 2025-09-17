@@ -20,8 +20,8 @@ export function AddTokenDialog() {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    fetchTrendingTokens();
-  }, []);
+    if (open) fetchTrendingTokens();
+  }, [open]);
 
   const fetchTrendingTokens = async () => {
     try {
@@ -156,7 +156,6 @@ export function AddTokenDialog() {
               className=" bg-primary hover:bg-primary/90 text-primary-foreground font-medium py-3 not-disabled:primary-button-shadow disabled:opacity-50 disabled:cursor-not-allowed disabled:bg-transparent disabled:border disabled:shadow-none disabled:text-[#52525B]"
             >
               Add to Wishlist
-              {/* {selectedTokens.size > 0 && <span>({selectedTokens.size})</span>} */}
             </Button>
           </div>
         </div>

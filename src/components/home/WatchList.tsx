@@ -223,11 +223,7 @@ const WatchList = () => {
                   </TableCell>
                   <TableCell className="py-4">
                     <span
-                      className={`font-normal text-[13px] ${
-                        (token.price_change_percentage_24h_usd || 0) >= 0
-                          ? "text-green-500"
-                          : "text-red-500"
-                      }`}
+                      className="font-normal text-[13px] text-muted"
                     >
                       {(token.price_change_percentage_24h_usd || 0) >= 0
                         ? "+"
